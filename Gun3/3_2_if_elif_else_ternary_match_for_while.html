@@ -10,9 +10,9 @@
 
 <style type="text/css">
     pre { line-height: 125%; }
-td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
-td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: var(--jp-cell-editor-active-background) }
 .highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
@@ -14259,7 +14259,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Karar-Yap&#305;lar&#305;">Karar Yap&#305;lar&#305;<a class="anchor-link" href="#Karar-Yap&#305;lar&#305;">&#182;</a></h2><ol>
+<h2 id="Karar-Yap%C4%B1lar%C4%B1">Karar Yap&#305;lar&#305;<a class="anchor-link" href="#Karar-Yap%C4%B1lar%C4%B1">&#182;</a></h2><ol>
 <li><strong><code>if, elif, else</code> kullanımı (iç içe if yazılabilir)</strong></li>
 </ol>
 <div class="highlight"><pre><span></span><span class="c1">#tüm if bloklarının çalışması için alt alta if yazarız.</span>
@@ -14546,7 +14546,7 @@ Sadece (+,-,*) işlemlerini destekliyoruz.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Tuple-Index-Y&#246;ntemi">Tuple-Index Y&#246;ntemi<a class="anchor-link" href="#Tuple-Index-Y&#246;ntemi">&#182;</a></h3>
+<h3 id="Tuple-Index-Y%C3%B6ntemi">Tuple-Index Y&#246;ntemi<a class="anchor-link" href="#Tuple-Index-Y%C3%B6ntemi">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14631,7 +14631,7 @@ Sadece (+,-,*) işlemlerini destekliyoruz.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="D&#246;ng&#252;ler-(for,-while)">D&#246;ng&#252;ler (for, while)<a class="anchor-link" href="#D&#246;ng&#252;ler-(for,-while)">&#182;</a></h3><ol>
+<h3 id="D%C3%B6ng%C3%BCler-(for,-while)">D&#246;ng&#252;ler (for, while)<a class="anchor-link" href="#D%C3%B6ng%C3%BCler-(for,-while)">&#182;</a></h3><ol>
 <li><strong>for döngüsü</strong> iterasyon yapılabilecek nesnelerin (container tipler, range vs.) elemanlarına tek tek ulaşmak için kullanılır.</li>
 </ol>
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">eleman</span> <span class="ow">in</span> <span class="n">iterNesnesi</span><span class="p">:</span>
@@ -14655,18 +14655,487 @@ Sadece (+,-,*) işlemlerini destekliyoruz.
 <p><strong>Not:</strong> Bütün döngüler <code>continue</code> ile bir sonraki iterasyona geçilir, <code>break</code> ile döngüden çıkır.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="for">for<a class="anchor-link" href="#for">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cumle</span> <span class="o">=</span> <span class="s1">&#39;merhaba dünyalı&#39;</span> <span class="c1">#str container tip.</span>
+
+<span class="c1">#1a</span>
+<span class="k">for</span> <span class="n">karakter</span> <span class="ow">in</span> <span class="n">cumle</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">karakter</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+    
+<span class="c1">#1b.</span>
+<span class="p">[</span><span class="n">karakter</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">karakter</span> <span class="ow">in</span> <span class="n">cumle</span><span class="p">]</span> <span class="c1">#list</span>
+<span class="p">{</span><span class="n">karakter</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">karakter</span> <span class="ow">in</span> <span class="n">cumle</span><span class="p">}</span> <span class="c1">#set</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>M-E-R-H-A-B-A- -D-Ü-N-Y-A-L-I-</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39; &#39;, &#39;A&#39;, &#39;B&#39;, &#39;D&#39;, &#39;E&#39;, &#39;H&#39;, &#39;I&#39;, &#39;L&#39;, &#39;M&#39;, &#39;N&#39;, &#39;R&#39;, &#39;Y&#39;, &#39;Ü&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#range iki sayı arasındaki tüm sayıları tutar.</span>
+<span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#0-10 arasındaki sayılar for ile içerisinde dönebiliriz.</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span> <span class="c1">#3-20</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#soru: 0-10 arasındaki sayıları ve karelerini yazalım. 2 karesi 4</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">#direkt ekrana yazdık.</span>
+<span class="sd">for s in range(10):</span>
+<span class="sd">    print(f&quot;{s} karesi {s**2}&quot;)</span>
+<span class="sd">&#39;&#39;&#39;</span> 
+<span class="c1">#----------------------</span>
+<span class="c1">#sonuç olarak elimizde bir liste olsun isteyebilirz.</span>
+
+<span class="n">lst_kareler</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">lst_kareler</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> karesi </span><span class="si">{</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1">#------------------------------</span>
+
+<span class="n">lst_kareler</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> karesi </span><span class="si">{</span><span class="n">s</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+
+<span class="c1">#---</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_kareler</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[&#39;0 karesi 0&#39;, &#39;1 karesi 1&#39;, &#39;2 karesi 4&#39;, &#39;3 karesi 9&#39;, &#39;4 karesi 16&#39;, &#39;5 karesi 25&#39;, &#39;6 karesi 36&#39;, &#39;7 karesi 49&#39;, &#39;8 karesi 64&#39;, &#39;9 karesi 81&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#örn: verilen aralıktaki çift sayıları döndürelim</span>
+<span class="c1">#2a açık hali</span>
+
+<span class="n">lst_cift</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">s</span><span class="o">%</span><span class="k">2</span>==0:
+        <span class="n">lst_cift</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="c1">#2b tek satırda</span>
+<span class="n">lst_cift</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="k">if</span> <span class="n">s</span><span class="o">%</span><span class="k">2</span>==0]
+<span class="c1">#----</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_cift</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#örn:Çarpım tablosunu oluşturalım</span>
+<span class="n">kaclar</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="c1">#3a.</span>
+<span class="n">lst_carpim</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">kaclar</span><span class="p">:</span>
+            <span class="n">lst_carpim</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1">#-----</span>
+<span class="c1">#3b</span>
+<span class="n">lst_carpim</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="n">kaclar</span><span class="p">]</span>
+
+<span class="c1">#--</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst_carpim</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[&#39;7x1 = 7&#39;, &#39;7x2 = 14&#39;, &#39;7x3 = 21&#39;, &#39;7x4 = 28&#39;, &#39;7x5 = 35&#39;, &#39;7x6 = 42&#39;, &#39;7x7 = 49&#39;, &#39;7x8 = 56&#39;, &#39;7x9 = 63&#39;, &#39;7x10 = 70&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#soru:</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Verilen cümledeki harf olmayanları temizleyelim.</span>
+<span class="sd">    kaç adet numeric karekter temizledik yazdıralım.</span>
+<span class="sd">    0 sayısını saymasın</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="n">cumle</span> <span class="o">=</span> <span class="s1">&#39;m0e!r01h-a32b_a dü3n@y31a-!lı&#39;</span>
+<span class="n">temiz_cumle</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">num_sayac</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">karakter</span> <span class="ow">in</span> <span class="n">cumle</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">karakter</span> <span class="o">==</span> <span class="s2">&quot;@&quot;</span><span class="p">:</span>
+        <span class="k">break</span> <span class="c1">#@ işare görüldüğünde döngüden çıkar.ilk döngüden çıkar.</span>
+    
+    <span class="k">if</span> <span class="n">karakter</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">karakter</span><span class="o">==</span><span class="s2">&quot;0&quot;</span><span class="p">:</span>
+            <span class="k">continue</span> <span class="c1">#döngü bir sonraki iterasyona geçer.            </span>
+        <span class="n">num_sayac</span> <span class="o">+=</span><span class="mi">1</span>    
+    <span class="k">elif</span> <span class="n">karakter</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">or</span> <span class="n">karakter</span><span class="o">.</span><span class="n">isspace</span><span class="p">():</span>
+        <span class="n">temiz_cumle</span> <span class="o">+=</span><span class="n">karakter</span>        
+        
+<span class="c1">#--</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">temiz_cumle</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">num_sayac</span><span class="si">}</span><span class="s2"> adet sayı bulundu&quot;</span><span class="p">)</span>
+    
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>merhaba dün
+4 adet sayı bulundu
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="While---else">While - else<a class="anchor-link" href="#While---else">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#örn:</span>
+<span class="n">sayac</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">sayac</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sayac</span><span class="p">)</span>
+    <span class="n">sayac</span> <span class="o">+=</span><span class="mi">1</span>
+    
+    <span class="c1">#--</span>
+    <span class="k">if</span> <span class="n">sayac</span> <span class="o">==</span><span class="mi">7</span><span class="p">:</span>
+        <span class="k">break</span> <span class="c1">#bu şekilde döngüden çıkıldığında else bloku çalışmaz.</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Şarta uymayan bir durumla karşılaşıldı: Sayac </span><span class="si">{</span><span class="n">sayac</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>0
+1
+2
+3
+4
+5
+6
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#örn:</span>
+<span class="c1">#kadi ve ksifre isteyelim (admin,123) doğru girene kadar isteyelim. </span>
+<span class="c1">#3 hak verelim. doğru giriş yapıldığında hoş geldiniz diyelim.</span>
+
+<span class="n">kadi</span><span class="o">=</span><span class="n">ksifre</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">denemeHakki</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">while</span> <span class="ow">not</span><span class="p">(</span><span class="n">kadi</span><span class="o">==</span><span class="s2">&quot;admin&quot;</span> <span class="ow">and</span> <span class="n">ksifre</span><span class="o">==</span><span class="s2">&quot;123&quot;</span><span class="p">):</span> <span class="c1">#kadi != &quot;admin&quot; or ksifre != &quot;123&quot;</span>
+    <span class="k">if</span> <span class="n">denemeHakki</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;&gt;&gt; Deneme Hakkınız Kalmadı &lt;&lt;&lt;&lt;&lt;&quot;</span><span class="p">)</span>
+        <span class="k">break</span> <span class="c1">#Döngüden çıkılsın</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">30</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hesap bilgilerinizi giriniz: &quot;</span><span class="p">)</span>
+    <span class="n">kadi</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Kullanıcı adını giriniz: &quot;</span><span class="p">)</span>
+    <span class="n">ksifre</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Şifre giriniz: &quot;</span><span class="p">)</span>
+    
+    <span class="c1">#deneme hakkını azaltalım</span>
+    <span class="n">denemeHakki</span> <span class="o">-=</span><span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;-----&gt; Hoş geldiniz </span><span class="si">{</span><span class="n">kadi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>==============================
+Hesap bilgilerinizi giriniz: 
+	Kullanıcı adını giriniz: admin
+	Şifre giriniz: d
+==============================
+Hesap bilgilerinizi giriniz: 
+	Kullanıcı adını giriniz: admin
+	Şifre giriniz: 123
+-----&gt; Hoş geldiniz admin
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#soru:</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    - Bilgisayar rastgele bir sayı tutsun (1-10 arasında)</span>
+<span class="sd">    - bu sayıyı tahmin etmeye çalışalım</span>
+<span class="sd">    - yukarı aşağı diye bizi yönlendirsin.</span>
+<span class="sd">    - kaç denemede bulundu, tutulan sayı nedir sonunda öğrenelim.</span>
+<span class="sd">    - max deneme sayısı da verilebilir. max deneme sayısı aralıktan daha küçük olmalı. 1-10 arasında 9 hak olabilir.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="c1">#random ile rastgele sayı türetebiliriz.</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1">#dir(random)</span>
+<span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1">#random.random() #0-1 arasında sayı üretir.</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.16585742732738373</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
